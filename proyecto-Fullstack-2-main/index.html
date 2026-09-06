@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora de Gas El Volcán - Inicio</title>
+    <!-- Uso de una hoja de estilos CSS externa (Requisito) -->
+    <link rel="stylesheet" href="css/styleIndex.css">
+</head>
+<body>
+
+    <!-- Encabezado con nombre/logotipo (Requisito) -->
+    <header id="encabezado">
+        <div class="logo-container">
+            <img src="img/logo2.jpg" alt="Logo Distribuidora de Gas El Volcán" id="logo" style="max-width: 180px; 
+            vertical-align: middle;">
+            <h1>Gas El Volcán</h1>
+        </div>
+        <p class="slogan">Distribución de gas licuado a domicilio desde 1998</p>
+
+        <!-- Menú de navegación (Requisito) -->
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="#catalogo">Catalogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="login.html">Inicio Sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        
+        <!-- Sección de presentación de la tienda (Requisito) -->
+        <section id="inicio" class="seccion">
+            <h2>Bienvenidos a Gas El Volcán</h2>
+            
+            <!-- Texto descriptivo relacionado con el negocio (Requisito) -->
+            <p>Somos una empresa familiar con más de 25 años de experiencia en la distribución de gas licuado en Chillán y comunas aledañas. Nuestro compromiso es brindar energía confiable, rápida y segura para tu hogar o negocio.</p>
+            <p>Contamos con una flota de camiones de reparto lista para garantizar que tu pedido llegue en el menor tiempo posible.</p>
+            
+            <!-- Enlaces o botones que permitan al usuario dirigirse al catálogo (Requisito) -->
+            <div style="margin: 20px 0;">
+                
+            </div>
+
+            <!-- Video incorporado a la página (Requisito) -->
+            <div class="video-container" style="margin-top: 30px;">
+                <h3>Conoce nuestro servicio en acción</h3>
+                <video controls width="100%" poster="img/poster-video.jpg" style="border-radius: 10px;">
+                    <source src="video/video.mp4" type="video/mp4">
+                    <source src="video/promocion-gas.webm" type="video/webm">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <p class="video-descripcion">Video promocional: Un día de reparto con Gas El Volcán</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CATÁLOGO / ÁLBUM (Imágenes relacionadas con productos) -->
+        <section id="catalogo" class="seccion">
+            <h2>Nuestro Catálogo</h2>
+            <p>Conoce nuestros productos mas requiridos para todas tus necesidades de consumo.</p>
+
+            <div class="galeria">
+                <!-- Tarjeta de Producto 1 -->
+                <article class="tarjeta producto-clickeable" onclick="window.location.href='producto.html?producto=5kg'" role="link" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' '){window.location.href='producto.html?producto=5kg'}">
+                    <div class="espacio-imagen">
+                        <img src="img/gas5kg.png" alt="Cilindro de gas de 5 kg" 
+                        style="width:100%; height:100%;  border-radius:10px;">
+                    </div>
+                    <h3>Cilindro 5 kg</h3>
+                    <p>Ideal para uso residencial ligero. Perfecto para cocinar y estufas pequeñas.</p>
+                    <span class="precio"><strong>$5.900</strong></span>
+                </article>
+
+                <!-- Tarjeta de Producto 2 -->
+                <article class="tarjeta producto-clickeable" onclick="window.location.href='producto.html?producto=11kg'" role="link" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' '){window.location.href='producto.html?producto=11kg'}">
+                    <div class="espacio-imagen">
+                        <img src="img/gas11kg.png" alt="Cilindro de gas de 11 kg" 
+                        style="width:100%; height:100%;  border-radius:10px;">
+                    </div>
+                    <h3>Cilindro 11 kg</h3>
+                    <p>El formato más popular para familias. Rendimiento óptimo mensual.</p>
+                    <span class="precio"><strong>$11.900</strong></span>
+                </article>
+
+                <!-- Tarjeta de Producto 3 -->
+                <article class="tarjeta producto-clickeable" onclick="window.location.href='producto.html?producto=15kg'" role="link" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' '){window.location.href='producto.html?producto=15kg'}">
+                    <div class="espacio-imagen">
+                        <img src="img/gas15kg.png" alt="Cilindro de gas de 15 kg" 
+                        style="width:100%; height:100%;  border-radius:10px;">
+                    </div>
+                    <h3>Cilindro 15 kg</h3>
+                    <p>Para alto consumo. Ideal para calefones grandes, restaurantes y negocios.</p>
+                    <span class="precio"><strong>$15.900</strong></span>
+                </article>
+
+            </div>
+        </section>
+            <!-- Aquí iría el formulario que ya tienes estructurado -->
+            <p><em>(Formulario de contacto)</em></p>
+            <section id="contacto" class="seccion">
+				<h2>Contacto directo</h2>
+				<p>Si tienes dudas o comentarios, puedes escribirnos:</p>
+
+				<form id="formulario" action="#" method="post">
+					<label for="nombre">Nombre:</label><br>
+					<input type="text" id="nombre" name="nombre"><br><br>
+
+					<label for="email">Correo:</label><br>
+					<input type="email" id="email" name="email"><br><br>
+
+					<label for="mensaje">Mensaje:</label><br>
+					<textarea id="mensaje" name="mensaje" rows="4" cols="30" ></textarea><br><br>
+
+					<button type="submit">Enviar</button>
+					<button type="reset">Limpiar</button>
+				</form>
+			</section>
+    </main>
+
+    <!-- Pie de página (Requisito) -->
+    <footer id="pie">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h4>Gas El Volcán</h4>
+                <p>Tu distribuidor de confianza desde 1998.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>📞 +56 42 1234 567</p>
+                <p>📧 contacto@gaselvolcan.cl</p>
+                <p>📍 Av. Libertad 123, Chillán</p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p><small>&copy; 2026 Distribuidora de Gas El Volcán - Todos los derechos reservados</small></p>
+            <p><small>Desarrollado para el curso DSY1104 - Desarrollo FullStack II</small></p>
+        </div>
+    </footer>
+
+    <!-- Archivo de scripts (Si lo requieres más adelante) -->
+    <script src="js/scripIndex.js"></script>
+</body>
+</html>

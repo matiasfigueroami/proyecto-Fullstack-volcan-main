@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/styleRegistro.css">
+</head>
+<body>
+<div class="migas"><a href="index.html">← Volver a Inicio</a></div>
+
+<form id="formulario">
+    <div id="logo">
+        <img src="img/logo2.jpg" alt="Logo de la empresa">
+        <h2>Registro</h2>
+        </div>
+        </br>
+</br>
+        <nav>
+            <fieldset id="espEmail">
+    <legend>Email:</legend>
+    <input type="email" required id="email" name="email" placeholder="Ingrese Email...">
+    </fieldset>
+</br>
+</br>
+<fieldset id="espNombre">
+    <legend>Nombre:</legend>
+    <input type="text" required id="name" name="name" placeholder="Ingrese su nombre...">
+</fieldset>
+</br>
+</br>
+     <fieldset id="espApellido">
+    <legend>Apellido:</legend>
+    <input type="text" required id="lastname" name="lastname" placeholder="Ingrese su apellido...">
+</fieldset>
+</br>
+</br>
+<fieldset id="espRut">
+    <legend>RUT:</legend>
+    <input type="text" required id="rut" name="rut" placeholder="12345678-9">
+</fieldset>
+</br>
+</br>
+<fieldset id="espTelefono">
+    <legend>Teléfono:</legend>
+    <input type="phone" required id="phone" name="phone" pattern="[9]{1} [0-9]{4} [0-9]{4}" placeholder="9 1234 5678">
+</fieldset>
+
+</br>
+</br>
+    <fieldset id="espUbicacion">
+    <legend>Ubicación:</legend>
+    <input type="text" required id="location" name="location" placeholder="Calle, Número, Comuna...">
+</fieldset>
+</br>
+</br>
+<fieldset id="espPass">
+    <legend>Contraseña:</legend>
+    <input type="password" required id="password" name="password" placeholder="Ingrese  una Contraseña">
+</fieldset>
+</br>
+</br>
+<fieldset id="espPass2">
+    <legend>Repetir Contraseña:</legend>
+    <input type="password" required id="password2" name="password2" placeholder="Repita la Contraseña">
+</fieldset>
+</nav>
+</br>
+</br>
+
+<button type="submit">Ingresar</button>
+
+<p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a></p>
+    </fieldset>
+</form>
+    <script src="js/scriptRegistro.js"></script>
+</body>
+</html>

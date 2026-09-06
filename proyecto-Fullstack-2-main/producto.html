@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto - Gas Volcano</title>
+    <link rel="stylesheet" href="css/styleProducto.css">
+</head>
+<body>
+    <header id="encabezado">
+        <img id="logo" src="img/logo_volcan.png" alt="Logo Gas Volcano">
+        <h1>GAS VOLCANO</h1>
+        <p class="slogan">Tu gas de confianza, siempre a tu alcance</p>
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <div class="migas"><a href="productos.html">← Volver a productos</a></div>
+
+        <section class="producto-container" aria-label="Detalle y pedido del producto">
+            <div class="producto-imagen">
+                <img id="imagenProducto" src="" alt="Producto seleccionado">
+            </div>
+
+            <div class="producto-info">
+                <span id="categoriaProducto" class="etiqueta">VOLCANO GAS</span>
+                <h2 id="nombreProducto">Producto</h2>
+                <p id="descripcionProducto"></p>
+                <div class="precio-producto">$<span id="precioProducto">0</span></div>
+
+                <div class="cantidad-container">
+                    <label for="cantidad">Cantidad</label>
+                    <div class="cantidad-control">
+                       <button type ="button" onclick="cambiarCantidad(-1)" aria-label="Disminuir cantidad">−</button>
+                        <input type="number" id="cantidad" value="1" min="1" max="10" readonly aria-label="Cantidad">
+                        <button type="button" onclick="cambiarCantidad(1)" aria-label="Aumentar cantidad">+</button>
+                    </div>
+                </div>
+
+                <div class="pago-container">
+                    <h3>Método de pago</h3>
+                    <label class="metodo-pago seleccionado">
+                        <input type="radio" name="pago" value="efectivo" >
+                        <div>
+                            <strong>💵 Efectivo al recibir</strong>
+                            <p>Realiza el pago directamente al repartidor al momento de la entrega.</p>
+                        </div>
+                    </label>
+                    <label class="metodo-pago deshabilitado">
+                        <input type="radio" name="pago" value="tarjeta" >
+                        <div>
+                            <strong>💳 Tarjeta / pago online</strong>
+                            <p>Realiza el pago en el sitio web antes de la entrega.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="total-container">
+                    <span>Total del pedido</span>
+                    <strong>$<span id="totalProducto">0</span></strong>
+                </div>
+
+                <button class="btn-confirmar" type="button" onclick="confirmarPedido()">Confirmar pedido</button>
+                <p class="nota-pago">El pago se registra al confirmar la entrega.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h4>Horario</h4>
+                <p>Lun a Vie: 8:00 - 20:00</p>
+                <p>Sábado: 9:00 - 18:00</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>📞 +56 9 1234 5678</p>
+                <p>📧 ventas@gasvolcano.cl</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Dirección</h4>
+                <p>Av. Principal #123</p>
+                <p>Ciudad, Chile</p>
+            </div>
+        </div>
+        <p><small>&copy; 2026 Gas Volcano - Todos los derechos reservados</small></p>
+    </footer>
+
+    <script src="js/scripProducto.js"></script>
+</body>
+</html>

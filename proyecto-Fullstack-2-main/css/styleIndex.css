@@ -1,0 +1,347 @@
+/* =========================================
+   VARIABLES GLOBALES Y RESETEO
+========================================= */
+:root {
+    --color-primario: #e65100;    /* Naranja fuerte del index */
+    --color-secundario: #ff6b6b;  /* Rojo coral del index */
+    --color-fondo: #f5f0eb;       /* Fondo claro del index */
+    --color-texto: #333333;
+    --color-encabezado: #222222;  /* Gris oscuro del index */
+    --color-blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================= */
+#encabezado {
+    background-color: var(--color-encabezado);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 15px;
+    
+}
+
+#encabezado #logo {
+    max-width: 140px;
+}
+
+#encabezado h1 {
+    color: var(--color-secundario);
+    font-size: 2.2em;
+    margin: 5px 0;
+}
+
+.slogan {
+    font-size: 1em;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Menú */
+#menu-principal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#menu-principal a {
+    color: var(--color-blanco);
+    background: #444;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#menu-principal a:hover {
+    background: var(--color-secundario);
+}
+
+/* =========================================
+   CONTENIDO Y SECCIONES
+========================================= */
+#contenido {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.seccion {
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.seccion h2 {
+    border-bottom: 3px solid var(--color-secundario);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    color: var(--color-texto);
+    text-align: center;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+.btn-catalogo {
+    display: inline-block;
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-catalogo:hover {
+    background: #cc4800;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   GALERÍA DE PRODUCTOS (Versión mejorada del Index)
+========================================= */
+.galeria {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    padding: 15px 10px;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.marca-logo {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: var(--color-primario);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 5px 0 2px 0;
+}
+
+.marca-logo span {
+    display: block;
+    font-size: 0.6em;
+    color: var(--color-secundario);
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.tipo-gas {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #1a1a1a;
+    background: #f0e8e0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 5px 0 8px 0;
+}
+
+.peso-cilindro {
+    font-size: 1.3em;
+    font-weight: 800;
+    color: #222;
+    background: #ffd700;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.tarjeta h3 {
+    color: #b22222;
+    margin: 10px 0 5px 0;
+    border-bottom: 2px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 3px;
+    font-size: 1.1em;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    padding: 0 5px;
+    color: #555;
+    margin: 5px 0;
+    min-height: 70px; 
+    flex-grow: 1;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--color-primario);
+    font-size: 1.2em;
+    display: block;
+    margin-top: auto;
+}
+
+.espacio-imagen {
+    width: 120px;
+    height: 140px;
+    margin: 5px auto 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.espacio-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================
+   FORMULARIO DE CONTACTO
+========================================= */
+#contacto form {
+    background: #f9f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contacto label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+}
+
+textarea {
+
+    resize: none;
+}
+
+.botones-formulario {
+    display: flex;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background: #4CAF50;
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background: #45a049;
+}
+
+button[type="reset"] {
+    background: #f44336;
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+button[type="reset"]:hover {
+    background: #d32f2f;
+}
+
+/* =========================================
+   PIE DE PÁGINA (FOOTER)
+========================================= */
+#pie {
+    background: var(--color-encabezado);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 3px solid var(--color-secundario);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-columna h4 {
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+
+.footer-columna p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+#pie small {
+    opacity: 0.6;
+    font-size: 0.8em;
+}
+/* Productos del catálogo: toda la tarjeta funciona como enlace */
+.producto-clickeable {
+    cursor: pointer;
+}
+
+.producto-clickeable:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 3px;
+}

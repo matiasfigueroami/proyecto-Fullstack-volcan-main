@@ -1,0 +1,311 @@
+/* =========================================
+   DETALLE DE PRODUCTO - ESTILO GAS VOLCANO
+   Mantiene la estética de la página de productos
+========================================= */
+:root {
+    --color-primario: #e65100;
+    --color-secundario: #ff6b6b;
+    --color-secundario-dark: #cc4800;
+    --color-fondo: #f5f0eb;
+    --color-texto: #333333;
+    --color-encabezado: #222222;
+    --color-blanco: #ffffff;
+    --color-accesorio: #4CAF50;
+    --sombra-tarjeta: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+#encabezado {
+    background-color: var(--color-encabezado);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 20px 15px;
+}
+
+#encabezado #logo {
+    max-width: 140px;
+    height: auto;
+}
+
+#encabezado h1 {
+    color: var(--color-secundario);
+    font-size: 2.2em;
+    margin: 5px 0;
+}
+
+.slogan {
+    font-size: 1em;
+    opacity: .85;
+    margin-bottom: 15px;
+}
+
+#menu-principal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#menu-principal a {
+    color: var(--color-blanco);
+    background: #444444;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color .3s ease;
+}
+
+#menu-principal a:hover {
+    background: var(--color-secundario);
+}
+
+#contenido {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.migas {
+    margin-bottom: 15px;
+}
+
+.migas a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.producto-container {
+    background: var(--color-blanco);
+    border-radius: 10px;
+    padding: 30px 25px;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(300px, 1fr);
+    gap: 35px;
+    align-items: center;
+    box-shadow: var(--sombra-tarjeta);
+    border-top: 5px solid var(--color-primario);
+}
+
+.producto-imagen {
+    min-height: 390px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.producto-imagen img {
+    width: 80%;
+    height: 350px;
+    object-fit: contain;
+    transition: transform .3s;
+}
+
+.producto-imagen img:hover {
+    transform: scale(1.04);
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--color-blanco);
+    background: var(--color-primario);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.producto-info h2 {
+    color: #222;
+    font-size: 2em;
+    margin: 12px 0 8px;
+}
+
+#descripcionProducto {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.precio-producto {
+    color: var(--color-primario);
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.cantidad-container {
+    margin-bottom: 22px;
+}
+
+.cantidad-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.cantidad-control {
+    display: flex;
+    width: 145px;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cantidad-control button {
+    width: 42px;
+    border: none;
+    background: var(--color-primario);
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.cantidad-control button:hover {
+    background: var(--color-secundario-dark);
+}
+
+.cantidad-control input {
+    width: 61px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background: white;
+}
+
+.pago-container h3 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.metodo-pago {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 13px;
+    margin-bottom: 8px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.metodo-pago:hover {
+    border-color: var(--color-secundario);
+    background: #fff8f3;
+}
+
+.metodo-pago input {
+    margin-top: 5px;
+    accent-color: var(--color-primario);
+}
+
+.metodo-pago strong {
+    display: block;
+    color: #333;
+}
+
+.metodo-pago p {
+    margin: 3px 0 0;
+    color: #777;
+    font-size: .82em;
+}
+
+
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 17px 0;
+    margin: 20px 0;
+}
+
+.total-container span {
+    font-size: 1.05em;
+}
+
+.total-container strong {
+    color: var(--color-primario);
+    font-size: 1.5em;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-primario);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s, transform .2s;
+}
+
+.btn-confirmar:hover {
+    background: var(--color-secundario-dark);
+    transform: translateY(-2px);
+}
+
+.nota-pago {
+    color: #777;
+    font-size: .78em;
+    text-align: center;
+    margin-top: 9px;
+}
+
+#contacto {
+    background: var(--color-encabezado);
+    color: rgba(255,255,255,.7);
+    text-align: center;
+    padding: 30px 20px 20px;
+    margin-top: 40px;
+    border-top: 3px solid var(--color-secundario);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+.footer-columna h4 {
+    color: var(--color-secundario);
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.footer-columna p {
+    margin: 4px 0;
+    font-size: .9em;
+}
+
+#contacto small {
+    opacity: .6;
+    font-size: .8em;
+}
+
