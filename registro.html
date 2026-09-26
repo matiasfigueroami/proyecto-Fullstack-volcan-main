@@ -1,78 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registro - Gas El Volcán</title>
     <link rel="stylesheet" href="css/styleRegistro.css">
 </head>
 <body>
-<div class="migas"><a href="index.html">← Volver a Inicio</a></div>
-
-<form id="formulario">
-    <div id="logo">
-        <img src="img/logo2.jpg" alt="Logo de la empresa">
-        <h2>Registro</h2>
+    <header id="encabezado">
+        <div class="logo-container">
+            <img src="img/logo2.jpg" alt="Logo Distribuidora de Gas El Volcán" id="logo">
+            <h1>Gas El Volcán</h1>
+            <p class="slogan">Distribución de gas licuado a domicilio desde 1998</p>
         </div>
-        </br>
-</br>
-        <nav>
-            <fieldset id="espEmail">
-    <legend>Email:</legend>
-    <input type="email" required id="email" name="email" placeholder="Ingrese Email...">
-    </fieldset>
-</br>
-</br>
-<fieldset id="espNombre">
-    <legend>Nombre:</legend>
-    <input type="text" required id="name" name="name" placeholder="Ingrese su nombre...">
-</fieldset>
-</br>
-</br>
-     <fieldset id="espApellido">
-    <legend>Apellido:</legend>
-    <input type="text" required id="lastname" name="lastname" placeholder="Ingrese su apellido...">
-</fieldset>
-</br>
-</br>
-<fieldset id="espRut">
-    <legend>RUT:</legend>
-    <input type="text" required id="rut" name="rut" placeholder="12345678-9">
-</fieldset>
-</br>
-</br>
-<fieldset id="espTelefono">
-    <legend>Teléfono:</legend>
-    <input type="phone" required id="phone" name="phone" pattern="[9]{1} [0-9]{4} [0-9]{4}" placeholder="9 1234 5678">
-</fieldset>
 
-</br>
-</br>
-    <fieldset id="espUbicacion">
-    <legend>Ubicación:</legend>
-    <input type="text" required id="location" name="location" placeholder="Calle, Número, Comuna...">
-</fieldset>
-</br>
-</br>
-<fieldset id="espPass">
-    <legend>Contraseña:</legend>
-    <input type="password" required id="password" name="password" placeholder="Ingrese  una Contraseña">
-</fieldset>
-</br>
-</br>
-<fieldset id="espPass2">
-    <legend>Repetir Contraseña:</legend>
-    <input type="password" required id="password2" name="password2" placeholder="Repita la Contraseña">
-</fieldset>
-</nav>
-</br>
-</br>
+        <!-- Menú de navegación -->
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="login.html">Inicio Sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<button type="submit">Ingresar</button>
+    <form id="formulario">
+        <fieldset id="espEmail">
+            <legend>Email:</legend>
+            <input type="email" required id="email" name="email" placeholder="Ingrese Email...">
+        </fieldset>
 
-<p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a></p>
-    </fieldset>
-</form>
+        <fieldset id="espNombre">
+            <legend>Nombre:</legend>
+            <input type="text" required id="name" name="name" placeholder="Ingrese su nombre...">
+        </fieldset>
+
+        <fieldset id="espApellido">
+            <legend>Apellido:</legend>
+            <input type="text" required id="lastname" name="lastname" placeholder="Ingrese su apellido...">
+        </fieldset>
+
+        <fieldset id="espRut">
+            <legend>RUT:</legend>
+            <input type="text" required id="rut" name="rut" placeholder="12345678-9">
+        </fieldset>
+
+        <fieldset id="espTelefono">
+            <legend>Teléfono:</legend>
+            <input type="tel" required id="phone" name="phone"
+                   pattern="[9]{1} [0-9]{4} [0-9]{4}" placeholder="9 1234 5678">
+        </fieldset>
+
+        <fieldset id="espUbicacion">
+            <legend>Ubicación:</legend>
+            <input type="text" required id="location" name="location"
+                   placeholder="Calle, Número, Comuna...">
+        </fieldset>
+
+        <fieldset id="espPass">
+            <legend>Contraseña:</legend>
+            <input type="password" required id="password" name="password"
+                   placeholder="Ingrese una Contraseña">
+        </fieldset>
+
+        <fieldset id="espPass2">
+            <legend>Repetir Contraseña:</legend>
+            <input type="password" required id="password2" name="password2"
+                   placeholder="Repita la Contraseña">
+        </fieldset>
+
+        <button type="submit">Ingresar</button>
+
+        <p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a></p>
+    </form>
+
     <script src="js/scriptRegistro.js"></script>
 </body>
 </html>
